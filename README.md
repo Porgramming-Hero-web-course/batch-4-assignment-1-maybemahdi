@@ -1,0 +1,1 @@
+ts-node-dev --respawn --transpile-only ./src/problem-1.ts

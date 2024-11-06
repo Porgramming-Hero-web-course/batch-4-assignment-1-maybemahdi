@@ -1,4 +1,4 @@
-// sum of all array elements
+// 1 - sum of all array elements
 const sumArray = (arrOfNumbers: number[]): number => {
   const sum: number = arrOfNumbers.reduce((total, value) => total + value, 0);
   return sum;
