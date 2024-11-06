@@ -20,6 +20,7 @@ function displayValue(value: number | string): void {
 displayValue(42);       // Works with a number
 displayValue("Hello");   // Works with a string
 ```
+Here, **value** can be a number or a string, and TypeScript ensures we only pass those types.
 
 ## When to Use Union Types
 Union types are ideal when a variable has limited possible types, like handling different user inputs or parsing various data structures from an API.
@@ -45,7 +46,7 @@ const user: AdminContributor = {
   articlesWritten: 10
 };
 ```
-Here, AdminContributor is an intersection type combining both Admin and Contributor. Therefore, any AdminContributor must include both adminPrivileges and articlesWritten.
+Here, **AdminContributor** is an intersection type combining both Admin and Contributor. Therefore, any AdminContributor must include both adminPrivileges and articlesWritten.
 
 ## When to Use Intersection Types
 Intersection types are great for merging behaviors or properties, useful in role-based permissions or when building complex objects from simpler interfaces.
@@ -79,7 +80,7 @@ console.log(calculateArea({ shape: "circle", radius: 5 }));         // 78.54
 console.log(calculateArea({ shape: "rectangle", width: 4, height: 6 })); // 24
 ```
 
-In this case, Shape is a union of Circle and Rectangle, allowing calculateArea to handle both shapes.
+In this case, **Shape** is a union of Circle and Rectangle, allowing calculateArea to handle both shapes.
 
 ## Example 2: Using Intersection Types for User Roles
 Suppose we have different roles in an application, such as User and Admin. An intersection type can help define a user with both roles:
@@ -103,7 +104,7 @@ const adminUser: AdminUser = {
 };
 ```
 
-Here, AdminUser combines the properties of both User and Admin, creating a specific type for users with admin rights.
+Here, **AdminUser** combines the properties of both **User** and **Admin**, creating a specific type for users with admin rights.
 
 ## Why Union and Intersection Types Matter
 
