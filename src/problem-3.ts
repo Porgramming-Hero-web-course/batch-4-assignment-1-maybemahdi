@@ -1,19 +1,12 @@
 {
-  // 3 - count a specific word that how many time does it repeat
+  // 3 - count a specific word that how many times does it repeat on given sentence
 
   const countWordOccurrences = (sentence: string, query: string): number => {
-    const freshSentence: string = sentence.toLowerCase();
+    const words: string[] = sentence.toLowerCase().split(/\s+/);
     const freshQuery: string = query.toLowerCase();
-    return freshSentence.split(freshQuery).length - 1;
+    return words.filter((word) => word === freshQuery).length;
   };
 
-  console.log(
-    countWordOccurrences(
-      "TypeScript is great. I love TypeScript!",
-      "typescript"
-    )
-  );
-
-
+  console.log(countWordOccurrences("I love typescript", "typescript"));
   //
 }

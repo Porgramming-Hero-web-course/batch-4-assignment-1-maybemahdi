@@ -1,13 +1,7 @@
 {
   // 8 - function for validateKeys
 
-  interface Person {
-    name: string;
-    age: number;
-    email: string;
-  }
-
-  const validateKeys = <T extends Person>(
+  const validateKeys = <T extends object>(
     person: T,
     keys: (keyof T)[]
   ): boolean => {
@@ -17,7 +11,7 @@
   const person = { name: "Alice", age: 25, email: "alice@example.com" };
 
   console.log(validateKeys(person, ["name", "age"])); // true
-  //   console.log(validateKeys(person, ["name", "age", "address"])); // false
+  console.log(validateKeys(person, ["name", "height"])); // false bcz person obj doesn't include height
 
   //
 }
