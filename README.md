@@ -18,4 +18,16 @@ ts-node-dev --respawn --transpile-only ./src/problem-2.ts
 
 //problem-3
 ts-node-dev --respawn --transpile-only ./src/problem-3.ts
+
+//problem-4
+ts-node-dev --respawn --transpile-only ./src/problem-4.ts
+
+//problem-5
+ts-node-dev --respawn --transpile-only ./src/problem-5.ts
+
+//problem-6
+ts-node-dev --respawn --transpile-only ./src/problem-6.ts
+
+//problem-7
+ts-node-dev --respawn --transpile-only ./src/problem-7.ts
 ```
