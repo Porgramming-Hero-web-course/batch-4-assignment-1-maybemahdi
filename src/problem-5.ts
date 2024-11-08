@@ -5,10 +5,10 @@
     T extends { name: string; age: number },
     K extends keyof T
   >(
-    person: T,
-    name: K
+    obj: T,
+    key: K
   ): T[K] => {
-    return person[name];
+    return obj[key];
   };
 
   const person = { name: "Alice", age: 30 };
